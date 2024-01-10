@@ -1,26 +1,33 @@
+<!-- <script context="module">
+const nodecallspython = require("node-calls-python");
+
+const py = nodecallspython.interpreter;
+
+
+</script> -->
 <script>
 	import Inputd from './inputd.svelte';
-	import { createEventDispatcher } from 'svelte';
 
-	import {onMount} from 'svelte';
-
+	//  import  * as api  from 'node-calls-python';
+	//  const py = api.interpreter;
 
 	
+	
+	 // py.import('test.py',false).then(async function (pymodule) {
+	// 	const result = await py.call(pymodule, 'multiple', [1, 2, 3, 4], [2, 3, 4, 5]);
+	// 	console.log(result);
+	// });
+
 	function myEventHandler(e) {
-       console.log('--??--',e.detail.myName)
-	  
-	   try {
-		e.detail.myName.focus()
-	    e.detail.myName.showPicker()
-    } catch (err) {
-      console.log(err)
-    }
+		console.log('--??--', e.detail.myName);
 
-
-
-  }
-
-
+		try {
+			e.detail.myName.focus();
+			e.detail.myName.showPicker();
+		} catch (err) {
+			console.log(err);
+		}
+	}
 </script>
 
 <p>
