@@ -1,37 +1,38 @@
 <script>
-import { createEventDispatcher } from 'svelte'
+	import Inputd from './inputd.svelte';
+	import { createEventDispatcher } from 'svelte';
 
-const dispatch = createEventDispatcher()
-
-
-let inputEl;
+	import {onMount} from 'svelte';
 
 
-	 function func(ev) {
-        dispatch('myEvent', {
-    myName: 'Heropy!!'
-  })
-
-
-		console.log(ev.currentTarget);
-		//inputEl.click(); //
-		//ev.target.click()
-		//console.log(ev.target)//.showPicker()
-        // inputEl.focus();
-        // inputEl.click();
-        ev.currentTarget.focus();
-		ev.currentTarget.showPicker();
-	}
 	
+	function myEventHandler(e) {
+       console.log('--??--',e.detail.myName)
+	  
+	   try {
+		e.detail.myName.focus()
+	    e.detail.myName.showPicker()
+    } catch (err) {
+      console.log(err)
+    }
+
+
+
+  }
+
+
 </script>
+
 <p>
-<button on:click={func}>Show Picker</button>
+	<button on:click={func}>Show Picker</button>
 </p>
 
-<div on:mouseover={func} style='padding:20px;background:silver'>
-<p>
-<input id='dtp' class="datepicker1" on:mousemove={func} bind:this={inputEl} type='datetime-local' />
-</p>
+<div on:mouseover={func} style="padding:20px;background:silver">
+	<p>
+		<Inputd on:myEvent={myEventHandler} />
+
+		<!-- <input id='dtp' class="datepicker1" on:mousemove={func} bind:this={inputEl} type='datetime-local' /> -->
+	</p>
 </div>
 
 <p>
