@@ -1,8 +1,8 @@
 import  * as api  from 'node-calls-python';
 const py = api.interpreter;
     
-     let pymodule = py.importSync("src/routes/test.py");
-	 pymodule = py.importSync("src/routes/test.py", true);
+let pymodule = py.importSync("src/routes/test.py");
+pymodule = py.importSync("src/routes/test.py", true);
 
 	export  function load({ params }) {
 		

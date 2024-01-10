@@ -31,10 +31,13 @@ const py = nodecallspython.interpreter;
 </script>
 
 <p>
-	<button on:click={func}>Show Picker</button>
+	<button >Show Picker</button>
 </p>
 
-<div on:mouseover={func} style="padding:20px;background:silver">
+<div>
+	<a href='/blog'>blog</a>
+</div>
+<div  style="padding:20px;background:silver">
 	<p>
 		<Inputd on:myEvent={myEventHandler} />
 

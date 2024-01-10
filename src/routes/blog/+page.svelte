@@ -4,6 +4,9 @@
 </script>
 
 <h1>BLOG</h1>
+<div>
+	<a href='/'>Home</a>
+</div>
 
 {#if data.result}
      <!-- content here -->
