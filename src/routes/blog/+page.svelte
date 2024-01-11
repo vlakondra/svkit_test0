@@ -9,11 +9,10 @@
 </div>
 
 {#if data.result}
-     <!-- content here -->
-    {data.result}
+    <!-- {data.result} -->
 <ul>
 	{#each data.result as item}
-		<li>{item}</li>
+		<li>{item[0]} -- {item[1]}</li>
 	{/each}
 </ul>
 {/if}

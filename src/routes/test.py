@@ -7,4 +7,4 @@ def multiple(a, b):
    url="https://raw.githubusercontent.com/cs109/2014_data/master/countries.csv"
    df=pd.read_csv(url)
 
-   return df.Country  #np.multiply(a, b).tolist()
+   return df.to_numpy()  #np.multiply(a, b).tolist()
