@@ -18,7 +18,9 @@ tasks:
      sudo apt install make
      sudo apt install g++
      
-     sudo pip install numpy
+     pip install --upgrade pip
+     pip install --upgrade pip wheel setuptools
+     pip install numpy
 
      if test -e requirements.txt; then {
         sudo pip install -r requirements.txt
