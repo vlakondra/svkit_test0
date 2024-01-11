@@ -8,7 +8,19 @@ ports:
 # List the start-up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks
 tasks:
   - name: Install Dependencies and Start Dev Server
-    init: npm install
+    init: |
+     npm install node-calls-python
+     npm install
+
+     apt install python3-dev
+     apt install make
+     apt install g++
+     npm install -g node-gyp
+
+     if test -e requirements.txt; then {
+        pip install -r requirements.txt
+      } fi
+      
     command: npm run dev
 
 vscode:
