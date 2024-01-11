@@ -17,6 +17,8 @@ tasks:
      sudo apt install python3-dev
      sudo apt install make
      sudo apt install g++
+     
+     sudo pip install numpy
 
      if test -e requirements.txt; then {
         sudo pip install -r requirements.txt
