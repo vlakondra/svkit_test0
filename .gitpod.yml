@@ -10,15 +10,16 @@ tasks:
   - name: Install Dependencies and Start Dev Server
     init: |
      npm install node-calls-python
-     npm install
-
-     apt install python3-dev
-     apt install make
-     apt install g++
      npm install -g node-gyp
 
+     npm install
+
+     sudo apt install python3-dev
+     sudo apt install make
+     sudo apt install g++
+
      if test -e requirements.txt; then {
-        pip install -r requirements.txt
+        sudo pip install -r requirements.txt
       } fi
       
     command: npm run dev
